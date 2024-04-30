@@ -4,11 +4,11 @@ export default function Text() {
   return (
     <Html>
       <div className='w-64'>
-        <header>This is a Great Tap</header>
+        <header>text</header>
         <main>
-          <div className='child-one'>Scroll to see animation</div>
-          <div className='child-one'>Look at the Hot tap</div>
-          <div className='child-two'>Look at the Cold tap</div>
+          <div className='child-one'>text</div>
+          <div className='child-one'>more text</div>
+          <div className='child-two'>Look at the thing</div>
         </main>
         <footer>Please buy it</footer>
       </div>
