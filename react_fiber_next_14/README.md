@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# react_fiber_next_14
+
+created with npm create- next app
+
+npm run dev
+
+use node v18
+
+npm install three
+npm install three @react-three/fiber
+npm install @react-three/postprocessing
+npm install @react-three/drei
+
+sketchpad for free 3d models (gltf format)
