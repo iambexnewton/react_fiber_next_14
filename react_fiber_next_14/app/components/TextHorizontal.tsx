@@ -4,7 +4,7 @@ export default function TextHorizontal() {
   return (
     <Html className='text-wrapper'>
       <div className='w-64'>
-        <header>text</header>
+        <header>Scroll Horizontal</header>
         <main>
           <div className='child-two'>Look at the thing</div>
         </main>

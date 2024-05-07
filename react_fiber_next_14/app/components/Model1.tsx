@@ -38,7 +38,7 @@ export default function Model1() {
 
       <Html transform={true}>
         <section className='text'>
-          <p>This is some text</p>
+          <p>Scroll Vertical</p>
         </section>
       </Html>
     </group>
