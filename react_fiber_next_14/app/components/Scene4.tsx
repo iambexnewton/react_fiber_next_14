@@ -1,18 +1,10 @@
 "use client";
 
-import * as THREE from "three";
 import { Canvas, extend } from "@react-three/fiber";
-import React, { Suspense, useRef } from "react";
-import {
-  useProgress,
-  Html,
-  ScrollControls,
-  MotionPathControls,
-} from "@react-three/drei";
+import React, { Suspense } from "react";
+import { useProgress, Html, ScrollControls } from "@react-three/drei";
 import Model4 from "./Model4";
-import Words from "./Text";
-
-extend(THREE);
+import Words from "./TextHorizontal";
 
 function Loader() {
   const { progress } = useProgress();
@@ -20,7 +12,6 @@ function Loader() {
 }
 
 export default function Scene4() {
-  const poi = useRef();
   return (
     <Canvas
       gl={{ antialias: true }}
@@ -30,7 +21,7 @@ export default function Scene4() {
     >
       <directionalLight position={[5, 5, 5]} intensity={4} />
       <Suspense fallback={<Loader />} />
-      <ScrollControls horizontal damping={0.3} pages={1}>
+      <ScrollControls horizontal pages={1}>
         <Model4 />
         <Words />
       </ScrollControls>

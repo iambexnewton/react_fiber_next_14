@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { useProgress, Html, ScrollControls } from "@react-three/drei";
 import Model1 from "./Model1";
-import Words from "./Text";
+// import Words from "./Text";
 
 function Loader() {
   const { progress } = useProgress();
@@ -18,7 +18,7 @@ export default function Scene1() {
       <Suspense fallback={<Loader />} />
       <ScrollControls damping={0.2} pages={1}>
         <Model1 />
-        <Words />
+        {/* <Words /> */}
       </ScrollControls>
     </Canvas>
   );

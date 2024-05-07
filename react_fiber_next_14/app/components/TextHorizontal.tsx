@@ -2,7 +2,7 @@ import { Html } from "@react-three/drei";
 
 export default function TextHorizontal() {
   return (
-    <Html className='text'>
+    <Html className='text-wrapper'>
       <div className='w-64'>
         <header>text</header>
         <main>

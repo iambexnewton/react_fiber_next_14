@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useAnimations, useGLTF, useScroll } from "@react-three/drei";
+import { Html, useAnimations, useGLTF, useScroll } from "@react-three/drei";
 import { Group } from "three";
 import { useFrame } from "@react-three/fiber";
 
@@ -12,8 +12,6 @@ export default function Model2() {
   const scroll = useScroll();
 
   useEffect(() => {
-    // console.log(actions);
-
     //@ts-ignore
     actions["Animation"].play().paused = true;
   }, []);
@@ -35,6 +33,11 @@ export default function Model2() {
   return (
     <group ref={group}>
       <primitive object={scene} scale={10} />
+      <Html transform={true}>
+        <section className='text'>
+          <p>This is some text</p>
+        </section>
+      </Html>
     </group>
   );
 }
