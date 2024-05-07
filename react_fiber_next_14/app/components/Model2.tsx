@@ -1,42 +1,40 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useAnimations, useGLTF, useScroll } from "@react-three/drei";
 import { Group } from "three";
 import { useFrame } from "@react-three/fiber";
 
-useGLTF.preload("/game_ready_wind_turbine_animated.glb");
+useGLTF.preload("/tap.glb");
 
-export default function Model() {
+export default function Model2() {
   const group = useRef<Group>(null);
-  const { nodes, materials, animations, scene } = useGLTF(
-    "/game_ready_wind_turbine_animated.glb"
-  );
+  const { nodes, materials, animations, scene } = useGLTF("/tap.glb");
   const { actions, clips } = useAnimations(animations, scene);
   const scroll = useScroll();
 
   useEffect(() => {
-    console.log(actions);
+    // console.log(actions);
 
     //@ts-ignore
-    actions["Scene"].play().paused = true;
+    actions["Animation"].play().paused = true;
   }, []);
   useFrame(
     () =>
       // @ts-ignore
-      (actions["Scene"].time =
+      (actions["Animation"].time =
         //@ts-ignore
-        actions["Scene"]?.getClip().duration * scroll.offset) / 3
+        actions["Animation"]?.getClip().duration * scroll.offset) / 3
     //@ts-ignore
   );
   useFrame(
     () =>
       // @ts-ignore
-      (scene.rotation.y = scroll.offset * Math.PI)
+      (scene.rotation.z = scroll.offset * Math.PI)
     //@ts-ignore
   );
 
   return (
     <group ref={group}>
-      <primitive object={scene} scale={3} />
+      <primitive object={scene} scale={10} />
     </group>
   );
 }

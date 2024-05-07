@@ -15,10 +15,22 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.sceneWrapper {
+  border: 1px solid green;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-block-end: 20px;
+}
+
 html,
 body {
   height: 100%;
 }
+/* .text {
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid green;
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -30,7 +42,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+canvas {
+  padding: 10px;
+  border: 1px solid red;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

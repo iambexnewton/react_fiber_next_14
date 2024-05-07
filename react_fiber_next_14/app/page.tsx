@@ -1,11 +1,21 @@
 import dynamic from "next/dynamic";
 
-const Scene = dynamic(() => import("./components/Scene"));
+const Scene1 = dynamic(() => import("./components/Scene1"));
+const Scene2 = dynamic(() => import("./components/Scene2"));
+const Scene3 = dynamic(() => import("./components/Scene3"));
 
 export default function Home() {
   return (
-    <main className='h-full'>
-      <Scene />
-    </main>
+    <div>
+      <section className='sceneWrapper'>
+        <Scene1 />
+      </section>
+      <section className='sceneWrapper'>
+        <Scene2 />
+      </section>
+      <section className='sceneWrapper'>
+        <Scene3 />
+      </section>
+    </div>
   );
 }
