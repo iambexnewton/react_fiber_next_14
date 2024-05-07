@@ -35,7 +35,7 @@ export default function Model2() {
       <primitive object={scene} scale={10} />
       <Html transform={true}>
         <section className='text'>
-          <p>Scroll Vertical</p>
+          <p >Scroll Vertical</p>
         </section>
       </Html>
     </group>
